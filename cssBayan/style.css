@@ -82,26 +82,24 @@ img {
 .accordion-title {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 2rem;
+  font-size: 2em;
   letter-spacing: 0.2em;
   margin-bottom: 10%;
 }
 
 .accordion-item {
-  border-top: 0.1rem solid #34549886;
-  padding: 5% 0px 0px 0px;
+  border-top: 0.1em solid #34549886;
+  padding: 5% 0em 0em 0em;
   cursor: pointer;
   margin-bottom: 8%;
   display: block;
 }
 
 .code-title {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: rgba(40, 23, 79, 0.798);
   display: block;
   cursor: pointer;
-  background: url("assets/plus-svgrepo-com.svg") right no-repeat;
-  background-size: 2rem;
   transition: all 0.3s ease 0s;
   margin-bottom: 2%;
 }
@@ -116,8 +114,8 @@ img {
 
 .code-body img {
   object-fit: cover;
-  max-width: 70%;
-  max-height: 70%;
+  width: 70%;
+  height: 70%;
   margin-bottom: 2%;
 }
 
@@ -132,7 +130,15 @@ img {
   height: 0;
   -webkit-appearance: none;
 }
-
+.arrow {
+  text-align: right;
+  margin-bottom: -1.2rem;
+}
+.arrow img {
+  height: 1rem;
+  width: 1rem;
+  transition: all 0.3s ease 0s;
+}
 .fa-plus {
   transition: all 0.3s ease 0s;
   display: flex;
@@ -140,9 +146,6 @@ img {
 
 .code-input:checked ~ .code-title {
   opacity: 0.4;
-  background-size: 2rem;
-  background-image: url("assets/xmark-small-svgrepo-com.svg");
-  background-position: right;
 }
 
 .code-input:checked ~ .code-body {
@@ -151,30 +154,64 @@ img {
   height: 100%;
 }
 
+.code-input:checked ~ .arrow img {
+  transform: rotate(180deg);
+}
+
 @media (hover: hover) {
-  .code-title:hover {
+  .item-first:hover .first {
     opacity: 0.4;
-    transition: all 0.3s ease 0s;
   }
-  .code-title:hover ~ .code-body {
+  .item-two:hover .second {
+    opacity: 0.4;
+  }
+  .item-three:hover .third {
+    opacity: 0.4;
+  }
+  .item-four:hover .fourth {
+    opacity: 0.4;
+  }
+  .item-first:hover .one {
     display: block;
     opacity: 1;
     height: 100%;
   }
-  .code-body:hover {
+  .item-two:hover .two {
     display: block;
     opacity: 1;
     height: 100%;
+  }
+  .item-three:hover .three {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .item-four:hover .four {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .item-first:hover .arrow-one img {
+    transform: rotate(180deg);
+  }
+  .item-two:hover .arrow-two img {
+    transform: rotate(180deg);
+  }
+  .item-three:hover .arrow-three img {
+    transform: rotate(180deg);
+  }
+  .item-four:hover .arrow-four img {
+    transform: rotate(180deg);
   }
 }
 
 @media (min-width: 1920px) {
   .accordion-title {
-    font-size: 5em;
+    font-size: 8em;
   }
 
   .code-title {
-    font-size: 3em;
+    font-size: 4em;
   }
 }
 
@@ -183,10 +220,10 @@ img {
     width: 70%;
   }
   .accordion-title {
-    font-size: 3em;
+    font-size: 3.2em;
   }
   .code-title {
-    font-size: 2.1em;
+    font-size: 2.3em;
     font-weight: bold;
   }
 }
@@ -196,10 +233,10 @@ img {
     width: 64%;
   }
   .code-title {
-    font-size: 1.9em;
+    font-size: 1.7em;
   }
 
   .accordion-title {
-    font-size: 2.5rem;
+    font-size: 2.4em;
   }
 }
