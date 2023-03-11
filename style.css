@@ -1,0 +1,205 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  background-color: #f7eccd;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  font-family: "Roboto", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.main {
+  width: 50%;
+  margin: 50px auto;
+}
+
+.accordion-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 10%;
+}
+
+.accordion-item {
+  border-top: 0.1rem solid #3454988f;
+  padding: 5% 0px 0px 0px;
+  cursor: pointer;
+  margin-bottom: 8%;
+  display: block;
+}
+
+.code-title {
+  font-size: 1.5rem;
+  color: rgba(40, 23, 79, 0.798);
+  display: block;
+  cursor: pointer;
+  background: url("assets/plus-svgrepo-com.svg") right no-repeat;
+  background-size: 2rem;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 2%;
+}
+
+.code-body {
+  cursor: pointer;
+  text-align: center;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.code-body img {
+  object-fit: cover;
+  max-width: 70%;
+  max-height: 70%;
+  margin-bottom: 2%;
+}
+
+.code-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+
+.fa-plus {
+  transition: all 0.3s ease 0s;
+  display: flex;
+}
+
+.code-input:checked ~ .code-title {
+  opacity: 0.4;
+  background-size: 2rem;
+  background-image: url("assets/xmark-small-svgrepo-com.svg");
+  background-position: right;
+}
+
+.code-input:checked ~ .code-body {
+  display: block;
+  opacity: 1;
+  height: 100%;
+}
+
+@media (hover: hover) {
+  .code-title:hover {
+    opacity: 0.4;
+    transition: all 0.3s ease 0s;
+  }
+  .code-title:hover ~ .code-body {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .code-body:hover {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+}
+
+@media (min-width: 1920px) {
+  .accordion-title {
+    font-size: 5em;
+  }
+
+  .code-title {
+    font-size: 3em;
+  }
+}
+
+@media (max-width: 820px) {
+  .main {
+    width: 70%;
+  }
+  .accordion-title {
+    font-size: 3em;
+  }
+  .code-title {
+    font-size: 2.1em;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: 64%;
+  }
+  .code-title {
+    font-size: 1.9em;
+  }
+
+  .accordion-title {
+    font-size: 2.5rem;
+  }
+}
