@@ -1,0 +1,242 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  background-color: #f7eccd;
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 0.875;
+  font-family: "Roboto", sans-serif;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+.main {
+  width: 50%;
+  margin: 5vw auto;
+}
+
+.accordion-title {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 2em;
+  letter-spacing: 0.2em;
+  margin-bottom: 10%;
+}
+
+.accordion-item {
+  border-top: 0.1em solid #34549886;
+  padding: 5% 0em 0em 0em;
+  cursor: pointer;
+  margin-bottom: 8%;
+  display: block;
+}
+
+.code-title {
+  font-size: 1.5em;
+  color: rgba(40, 23, 79, 0.798);
+  display: block;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  margin-bottom: 2%;
+}
+
+.code-body {
+  cursor: pointer;
+  text-align: center;
+  opacity: 0;
+  height: 0;
+  transition: all 0.3s ease 0s;
+}
+
+.code-body img {
+  object-fit: cover;
+  width: 70%;
+  height: 70%;
+  margin-bottom: 2%;
+}
+
+.code-block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.code-input {
+  width: 0;
+  height: 0;
+  -webkit-appearance: none;
+}
+.arrow {
+  text-align: right;
+  margin-bottom: -1.2rem;
+}
+.arrow img {
+  height: 1rem;
+  width: 1rem;
+  transition: all 0.3s ease 0s;
+}
+.fa-plus {
+  transition: all 0.3s ease 0s;
+  display: flex;
+}
+
+.code-input:checked ~ .code-title {
+  opacity: 0.4;
+}
+
+.code-input:checked ~ .code-body {
+  display: block;
+  opacity: 1;
+  height: 100%;
+}
+
+.code-input:checked ~ .arrow img {
+  transform: rotate(180deg);
+}
+
+@media (hover: hover) {
+  .item-first:hover .first {
+    opacity: 0.4;
+  }
+  .item-two:hover .second {
+    opacity: 0.4;
+  }
+  .item-three:hover .third {
+    opacity: 0.4;
+  }
+  .item-four:hover .fourth {
+    opacity: 0.4;
+  }
+  .item-first:hover .one {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .item-two:hover .two {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .item-three:hover .three {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .item-four:hover .four {
+    display: block;
+    opacity: 1;
+    height: 100%;
+  }
+  .item-first:hover .arrow-one img {
+    transform: rotate(180deg);
+  }
+  .item-two:hover .arrow-two img {
+    transform: rotate(180deg);
+  }
+  .item-three:hover .arrow-three img {
+    transform: rotate(180deg);
+  }
+  .item-four:hover .arrow-four img {
+    transform: rotate(180deg);
+  }
+}
+
+@media (min-width: 1920px) {
+  .accordion-title {
+    font-size: 8em;
+  }
+
+  .code-title {
+    font-size: 4em;
+  }
+}
+
+@media (max-width: 820px) {
+  .main {
+    width: 70%;
+  }
+  .accordion-title {
+    font-size: 3.2em;
+  }
+  .code-title {
+    font-size: 2.3em;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 320px) {
+  .main {
+    width: 64%;
+  }
+  .code-title {
+    font-size: 1.7em;
+  }
+
+  .accordion-title {
+    font-size: 2.4em;
+  }
+}
